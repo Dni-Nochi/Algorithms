@@ -7,10 +7,9 @@ function findTarget(numbers, target) {
   for (let i = 0; i < numbers.length; i++) {
     if (numbers[i] === target) {
       return i;
-    } else {
-      return -1;
     }
   }
+  return -1;
 }
 
 // 2. Дан массив и target. Верни массив всех индексов, где встречается target.
@@ -19,11 +18,13 @@ function findTargets(numbers, target) {
   for (let i = 0; i < numbers.length; i++) {
     if (numbers[i] === target) {
       targets.push(i);
-    } else {
-      console.log('not target');
     }
   }
-  return targets;
+  if (targets.length === 0) {
+    return undefined;
+  } else {
+    return targets;
+  }
 }
 
 // 3. Дан массив объектов { name: string, age: number }.
@@ -42,6 +43,7 @@ function findPerson(personsDataBase, target) {
       return personsDataBase[i];
     }
   }
+  return undefined;
 }
 
 // 4. Front-end-задача (когда будешь готов)
@@ -60,9 +62,10 @@ const users = [
 function findUserById(usersRedux, id) {
   for (let i = 0; i < usersRedux.length; i++) {
     if (usersRedux[i].id === id) {
-      return i;
+      return usersRedux[i];
     }
   }
+  return -1;
 }
 
 console.log(findUserById(users, 91));
