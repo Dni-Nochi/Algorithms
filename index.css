@@ -81,6 +81,8 @@ select {
 .header {
   padding-block: 10px;
   background-color: rgb(185, 169, 148);
+  border-end-start-radius: 15px;
+  border-end-end-radius: 15px;
 }
 
 .nav__list {
@@ -99,4 +101,14 @@ select {
 
 .nav__link:hover {
   opacity: 0.6;
+}
+
+.nav__item--disabled {
+  cursor: no-drop;
+}
+
+.nav__link--disabled {
+  cursor: no-drop;
+  opacity: 0.5;
+  pointer-events: none;
 }
