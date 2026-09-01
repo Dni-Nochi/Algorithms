@@ -78,6 +78,7 @@ select {
   }
 }
 
+/* ДЛЯ ВСЕХ СТРАНИЦ */
 .header {
   padding-block: 10px;
   background-color: rgb(185, 169, 148);
@@ -111,4 +112,28 @@ select {
   cursor: no-drop;
   opacity: 0.5;
   pointer-events: none;
+}
+
+.main-indentations {
+  margin-top: 60px;
+}
+
+/* ДЛЯ СТРАНИЦЫ С АЛГОРИТМАМИ */
+.algorithms-main {
+  display: flex;
+  justify-content: center;
+}
+
+.algorithms-tasks-list {
+  width: 1400px;
+}
+
+.algorithms-tasks-link {
+  color: #000;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.algorithms-tasks-link:hover {
+  opacity: 0.6;
 }
