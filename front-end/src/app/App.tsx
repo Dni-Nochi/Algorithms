@@ -1,5 +1,5 @@
 import { Link, Outlet } from 'react-router-dom';
-import '@/algo/algo';
+import '@/algo/search-algorithms/algo';
 
 function App() {
   return (
