@@ -1,4 +1,5 @@
 import { Link, Outlet } from 'react-router-dom';
+import '@/algo/algo';
 
 function App() {
   return (
