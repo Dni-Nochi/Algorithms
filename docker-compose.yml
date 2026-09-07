@@ -1,18 +1,9 @@
 version: '3.8'
 
 services:
-  backend:
-    build: ./back-end
-    ports:
-      - '3001:3001'
-    volumes:
-      - my_app_data:/app/data
-
   frontend:
     build: ./front-end
     ports:
       - '5173:5173'
     depends_on:
       - backend
-volumes:
-  my_app_data:
