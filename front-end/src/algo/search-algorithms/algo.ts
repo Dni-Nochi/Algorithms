@@ -18,5 +18,3 @@ function lowerBound(arr: number[], target: number) {
 
   return result;
 }
-
-console.log(lowerBound(arr, 8));
