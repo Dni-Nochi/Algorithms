@@ -1,5 +1,6 @@
 import { Link, Outlet } from 'react-router-dom';
 import '@/algo/search-algorithms/algo';
+import '@/algo/sorting-algorithms/bubble-sort';
 
 function App() {
   return (
