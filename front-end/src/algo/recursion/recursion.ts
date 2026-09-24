@@ -40,11 +40,11 @@
 
 // console.log(power(2, -2));
 
-const array = [0];
-array[1] = 1;
-array[2] = 2;
-array[3] = 3;
-array[4] = 4;
-array.push(5);
-array.push(6);
-console.log(array, array[0]);
+// const array = [0];
+// array[1] = 1;
+// array[2] = 2;
+// array[3] = 3;
+// array[4] = 4;
+// array.push(5);
+// array.push(6);
+// console.log(array, array[0]);
