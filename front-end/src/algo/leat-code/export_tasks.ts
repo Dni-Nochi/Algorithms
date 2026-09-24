@@ -1,1 +1,1 @@
-export { twoSum } from './TwoSum';
+export { twoSum } from './1_two_sum';
