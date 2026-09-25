@@ -1,4 +1,5 @@
-import { Link, Outlet } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
+import { Header } from '@/widgets/header';
 import '@/algo/search-algorithms/algo';
 import '@/algo/sorting-algorithms/bubble-sort';
 import '@/algo/recursion/recursion';
@@ -6,14 +7,15 @@ import '@/algo/recursion/recursion';
 function App() {
   return (
     <div>
-      <header>
+      <Header />
+      {/* <header>
         <Link to="/" className="">
           Главная
         </Link>
         <Link to="/algorithms" className="">
           Алго
         </Link>
-      </header>
+      </header> */}
       <main>
         <Outlet />
       </main>
