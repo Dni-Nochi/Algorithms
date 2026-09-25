@@ -2,7 +2,7 @@ import { Link, Outlet } from 'react-router-dom';
 import '@/algo/search-algorithms/algo';
 import '@/algo/sorting-algorithms/bubble-sort';
 import '@/algo/recursion/recursion';
-import '@/algo/leat-code/export_tasks';
+import '@/algo/leet-code/export_tasks';
 
 function App() {
   return (

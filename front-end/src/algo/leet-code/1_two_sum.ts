@@ -1,4 +1,3 @@
-const arrayInt: number[] = [2, 7, 11, 15];
 export function twoSum(nums: number[], target: number): number[] {
   const seen = new Map<number, number>();
 
@@ -15,4 +14,4 @@ export function twoSum(nums: number[], target: number): number[] {
   return [];
 }
 
-console.log(twoSum(arrayInt, 17));
+// console.log(twoSum([2, 7, 11, 15], 17));

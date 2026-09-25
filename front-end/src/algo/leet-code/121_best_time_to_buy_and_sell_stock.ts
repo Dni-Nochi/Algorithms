@@ -16,4 +16,4 @@ export function maxProfit(prices: number[]): number {
   return best;
 }
 
-console.log(maxProfit([3, 2, 6, 1, 4]));
+// console.log(maxProfit([3, 2, 6, 1, 4]));
