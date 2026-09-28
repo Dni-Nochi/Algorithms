@@ -12,10 +12,12 @@ export function findMaxConsecutiveOnes(nums: number[]): number {
       }
     }
   }
-  console.log(biggerStrick);
+
   return biggerStrick;
 }
 
-findMaxConsecutiveOnes([
-  0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1,
-]);
+// console.log(
+//   findMaxConsecutiveOnes([
+//     0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1,
+//   ]),
+// );
