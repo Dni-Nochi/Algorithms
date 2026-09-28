@@ -1,3 +1,3 @@
 export function Algorithms() {
-  return <div>Algo</div>;
+  return <div className="mx-20">Algo</div>;
 }
