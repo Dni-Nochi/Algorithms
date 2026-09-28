@@ -1,6 +1,6 @@
 export function HomePage() {
   return (
-    <div>
+    <div className="mx-20">
       <p>Test</p>
     </div>
   );

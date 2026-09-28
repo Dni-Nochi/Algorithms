@@ -6,17 +6,9 @@ import '@/algo/recursion/recursion';
 
 function App() {
   return (
-    <div>
+    <div className="flex flex-col min-h-screen">
       <Header />
-      {/* <header>
-        <Link to="/" className="">
-          Главная
-        </Link>
-        <Link to="/algorithms" className="">
-          Алго
-        </Link>
-      </header> */}
-      <main>
+      <main className="grow bg-[#fffaf2]">
         <Outlet />
       </main>
     </div>

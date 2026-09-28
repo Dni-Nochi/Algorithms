@@ -1,6 +1,7 @@
-import { createBrowserRouter } from 'react-router';
+import { createBrowserRouter } from 'react-router-dom';
 import { HomePage } from '@/pages/home';
 import { Algorithms } from '@/pages/algorithms';
+import { SolvedTasks } from '@/pages/solved_tasks';
 import App from '../App';
 
 export const router = createBrowserRouter([
@@ -12,6 +13,10 @@ export const router = createBrowserRouter([
       {
         path: 'algorithms',
         element: <Algorithms />,
+      },
+      {
+        path: 'solved_tasks',
+        element: <SolvedTasks />,
       },
     ],
   },
