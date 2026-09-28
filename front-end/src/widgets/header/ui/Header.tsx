@@ -1,27 +1,12 @@
-import { Link } from 'react-router-dom';
+import { Logo } from '@/shared/ui/logo';
 
 export function Header() {
   return (
-    <header className="flex gap-4">
-      <div>
-        <Link to="/">ALGO</Link>
+    <header className="border-b-2 border-[#c1c1c1] bg-[#fffaf2]">
+      <div className="flex justify-between items-center gap-4 h-15 mx-20">
+        <Logo />
+        <button>|||</button>
       </div>
-      <nav>
-        <ul className="flex gap-2">
-          <li>
-            <Link to="/algorithms">Текст</Link>
-          </li>
-          <li>
-            <Link to="/algorithms">Текст</Link>
-          </li>
-          <li>
-            <Link to="/algorithms">Текст</Link>
-          </li>
-          <li>
-            <Link to="/algorithms">Текст</Link>
-          </li>
-        </ul>
-      </nav>
     </header>
   );
 }
