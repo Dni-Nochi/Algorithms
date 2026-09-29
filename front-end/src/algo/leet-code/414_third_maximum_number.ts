@@ -13,5 +13,4 @@ export function thirdMax(nums: number[]): number {
   }
 }
 
-console.log(thirdMax([1, 2, 3, 4, 5]));
-console.log(thirdMax([11, 1]));
+// console.log(thirdMax([1, 2, 3, 4, 5]));
