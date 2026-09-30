@@ -10,7 +10,7 @@ export function BurgerButton({ isOpen, onClick }: BurgerProps) {
       aria-expanded={isOpen}
       aria-controls="mobile-menu"
       onClick={onClick}
-      className="relative flex h-6 w-8 flex-col justify-between cursor-pointer"
+      className="relative flex h-6 w-8 flex-col justify-between cursor-pointer md:hidden"
     >
       <span
         className={`h-0.5 w-full bg-current transition-transform duration-300 ${isOpen ? 'translate-y-2.75 rotate-45' : ''}`}
