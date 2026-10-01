@@ -20,4 +20,4 @@ export function firstBadVersion(n: number) {
   return right;
 }
 
-console.log(firstBadVersion(5));
+// console.log(firstBadVersion(5));

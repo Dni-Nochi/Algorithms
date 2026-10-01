@@ -6,4 +6,4 @@
 // export { thirdMax } from './414_third_maximum_number';
 // export { search } from './704_binary_search';
 // export { searchInsert } from './35_search_insert_position';
-export { firstBadVersion } from './278_first_bad_version';
+// export { firstBadVersion } from './278_first_bad_version';
