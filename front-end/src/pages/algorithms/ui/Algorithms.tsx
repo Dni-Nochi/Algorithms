@@ -41,7 +41,8 @@ export function Algorithms() {
                 description={task.description}
                 taskId={task.taskId}
                 solved={task.solved}
-                propsFunction={() => toggleSolved(task.taskId)}
+                level={task.level}
+                onToggleSolved={() => toggleSolved(task.taskId)}
               />
             </li>
           ))
