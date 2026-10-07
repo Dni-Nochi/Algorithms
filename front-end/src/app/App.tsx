@@ -1,8 +1,6 @@
 import { Outlet } from 'react-router-dom';
 import { Header } from '@/widgets/header';
-import '@/algo/search-algorithms/algo';
-import '@/algo/sorting-algorithms/bubble-sort';
-import '@/algo/recursion/recursion';
+import '@/algo/learn-algorithms/index';
 import '@/algo/leet-code/export_tasks';
 
 function App() {
