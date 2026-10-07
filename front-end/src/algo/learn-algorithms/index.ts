@@ -1,4 +1,5 @@
 // Search Algorithms
 
 // Sorting Algorithms
-export { BubbleSort } from './sorting-algorithms/bubble-sort';
+export { bubbleSort } from './sorting-algorithms/bubble-sort';
+export { selectionSort } from './sorting-algorithms/selection-sort';
