@@ -16,8 +16,8 @@ export function TasksCard({
   onToggleSolved,
 }: TasksCardProps) {
   return (
-    <article className="p-5 rounded-xl border border-[#E2E8F0]">
-      <div className="flex justify-between">
+    <article className="w-97.5 p-5 rounded-xl bg-white border border-[#E2E8F0]">
+      <div className="flex justify-between pb-2">
         <p className={`px-2 py-0.5 border rounded-lg ${levelClasses[level]}`}>
           {level}
         </p>
@@ -25,11 +25,14 @@ export function TasksCard({
           {solved ? 'Решено' : 'Не решено'}
         </p>
       </div>
-      <h3>
+      <h3 className="font-semibold text-2xl">
         LeetCode id:{taskId} - {title}
       </h3>
-      <p>{description}</p>
-      <Button onClick={onToggleSolved}>Переключить статус</Button>
+      <p className="py-3">{description}</p>
+      <div className="flex justify-between">
+        <Button onClick={onToggleSolved}>Переключить статус</Button>
+        <Button variant="algo_link">{solved ? 'Разбор >' : 'Решать'}</Button>
+      </div>
     </article>
   );
 }
