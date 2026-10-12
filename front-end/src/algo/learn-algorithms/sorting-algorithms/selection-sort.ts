@@ -18,5 +18,5 @@ export function selectionSort(arr: number[]): number[] {
   return arr;
 }
 
-const array = [10, 6, 5, 3, 2];
-console.log(selectionSort(array));
+// const array = [10, 6, 5, 3, 2];
+// console.log(selectionSort(array));
