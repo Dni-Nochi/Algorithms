@@ -10,7 +10,7 @@ export function Header() {
     setIsOpen((prev) => !prev);
   }
   return (
-    <header className="border-b-2 border-[#c1c1c1] bg-[#fffaf2]">
+    <header className="bg-[#fffaf2]">
       <div className="flex items-center md:h-10 md:mx-16 lg:h-15 lg:mx-20 lg:justify-start lg:gap-10">
         <Logo />
         <HeaderNav />

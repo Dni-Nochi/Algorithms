@@ -1,101 +1,84 @@
-import { useState } from 'react';
-const MIN_PASSWORD_LENGTH = 8;
+import type { NotesProps } from '@/entities/notes/types/types';
+import { NotesCard } from '@/entities/notes';
+import React, { useState } from 'react';
+import { ArticleF1 } from '@/widgets/article-f1';
 
-function getEmailError(input: HTMLInputElement) {
-  if (input.validity.valueMissing) return 'Введите почту';
-  if (input.validity.typeMismatch) return 'Некорректный адрес почты';
-  return '';
-}
 export function ReactMechanics() {
-  const [isPasswordView, setIsPasswordView] = useState(false);
-  const [passwordValue, setPasswordValue] = useState('');
-  const [errorEmailMessage, setErrorEmailMessage] = useState('');
+  const [notesListsChange, setNotesListsChange] = useState<NotesProps[]>([]);
+  const [formDate, setFormDate] = useState({ name: '', message: '' });
 
-  function handleEmailBlur(e: React.FormEvent<HTMLInputElement>) {
-    setErrorEmailMessage(getEmailError(e.currentTarget));
+  console.log(notesListsChange);
+
+  function handleChange(
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) {
+    const { name, value } = e.target;
+    setFormDate((prev) => ({ ...prev, [name]: value }));
   }
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const form = e.currentTarget;
+    const newNote: NotesProps = {
+      id: crypto.randomUUID(),
+      name: formDate.name,
+      message: formDate.message,
+    };
 
-    if (!form.checkValidity()) {
-      const emailInput = form.elements.namedItem('email');
-      if (emailInput instanceof HTMLInputElement) {
-        setErrorEmailMessage(getEmailError(emailInput));
-      }
-      return;
-    }
-
-    const data = Object.fromEntries(new FormData(form));
-    console.log(data);
+    setNotesListsChange((prevNotes) => [...prevNotes, newNote]);
+    console.log('test', formDate);
+    setFormDate({ name: '', message: '' });
   }
-
-  const isPasswordLongEnough = passwordValue.length >= MIN_PASSWORD_LENGTH;
   return (
-    <div className="flex justify-center">
+    <div className="flex flex-col mx-20">
+      <h1>Mechanics pages</h1>
+      <div className="flex gap-8 w-full bg-[#f2fffa] rounded-2xl p-4 shadow-xl">
+        <ArticleF1 />
+      </div>
       <form
         onSubmit={handleSubmit}
-        className="grid gap-3 w-100 p-2 rounded-xl bg-black text-white"
-        noValidate
+        className="flex flex-col w-[50%] self-end  mt-2.5 gap-2 p-5 bg-[#f2fffa] rounded-2xl"
       >
-        <div className="grid gap-1">
-          <label htmlFor="email">Почта</label>
-          <input
-            id="email"
-            name="email"
-            type="email"
-            autoComplete="email"
-            placeholder="Email@example.com"
-            onBlur={handleEmailBlur}
-            onChange={() => setErrorEmailMessage('')}
-            className="py-1 px-2 border-2 rounded-md focus-visible:ring-2 user-invalid:border-red-500 placeholder-zinc-400"
-            required
-          />
-          {errorEmailMessage ? <p>Ошибка заполнения</p> : ''}
-        </div>
-
-        <div className="grid gap-1">
-          <label htmlFor="password">Пароль</label>
-          <div className="relative w-full">
-            <input
-              id="password"
-              name="password"
-              type={isPasswordView ? 'text' : 'password'}
-              autoComplete="current-password"
-              placeholder="write your password"
-              value={passwordValue}
-              minLength={MIN_PASSWORD_LENGTH}
-              onChange={(e) => setPasswordValue(e.target.value)}
-              className="w-full py-1 pl-2 pr-25 border-2 rounded-md focus-visible:ring-2 user-invalid:border-red-500 placeholder-zinc-400"
-              required
-            />
-            <button
-              type="button"
-              onClick={() => setIsPasswordView((prev) => !prev)}
-              aria-label={isPasswordView ? 'Скрыть пароль' : 'Показать пароль'}
-              className="absolute rounded-md right-2 top-1/2 -translate-y-1/2 cursor-pointer"
-            >
-              {isPasswordView ? 'Скрыть' : 'Показать'}
-            </button>
-          </div>
-          {isPasswordLongEnough ? (
-            ''
-          ) : (
-            <p
-              className={`pt-1 pl-1 ${
-                isPasswordLongEnough ? 'text-green-400' : 'text-red-400'
-              }`}
-            >
-              {passwordValue.length} / {MIN_PASSWORD_LENGTH}
-            </p>
-          )}
-        </div>
-
-        <button type="submit" className="border rounded-md">
-          Войти
+        <input
+          name="name"
+          value={formDate.name}
+          onChange={handleChange}
+          className="border-b border-b-gray-300 transition-colors duration-200 focus:outline-none focus:border-b-gray-700"
+          placeholder="Впише ваше имя"
+          required
+        />
+        <textarea
+          name="message"
+          rows={1}
+          value={formDate.message}
+          onChange={handleChange}
+          className="border-b border-b-gray-300  resize-none overflow-hidden transition-colors duration-200 focus:outline-none focus:border-b-gray-700"
+          placeholder="Оставьте комментарий..."
+          required
+        ></textarea>
+        <button className="p-1 cursor-pointer border rounded-2xl" type="submit">
+          Отправить
         </button>
       </form>
+      <div className="grid grid-cols-3 gap-2 mt-5 border-t border-t-gray-400">
+        {notesListsChange.length > 0 ? (
+          notesListsChange.map(({ id, name, message }) => {
+            return <NotesCard key={id} id={id} name={name} message={message} />;
+          })
+        ) : (
+          <p className="mt-5">Комментариев пока нет</p>
+        )}
+      </div>
     </div>
   );
+}
+
+{
+  /* <textarea
+  ref={textareaRef}
+  rows={1}
+  value={text}
+  onChange={handleChange}
+  placeholder="Оставьте комментарий..."
+  className="w-full p-2 resize-none overflow-hidden  border-b border-gray-300 focus:outline-none focus:border-gray-700  transition-colors duration-200"
+></textarea>; */
 }
