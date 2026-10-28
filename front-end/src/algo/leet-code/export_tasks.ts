@@ -7,3 +7,4 @@
 // export { search } from './704_binary_search';
 // export { searchInsert } from './35_search_insert_position';
 // export { firstBadVersion } from './278_first_bad_version';
+export { longestCommonPrefix } from './14_longest_common_prefix';
