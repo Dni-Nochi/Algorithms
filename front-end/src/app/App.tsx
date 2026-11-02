@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
-      <main className="grow bg-[#fffaf2]">
+      <main className="grow bg-[#0a0a0a] text-white">
         <Outlet />
       </main>
     </div>

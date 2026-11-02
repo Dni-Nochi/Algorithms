@@ -10,7 +10,7 @@ export function Header() {
     setIsOpen((prev) => !prev);
   }
   return (
-    <header className="bg-[#fffaf2]">
+    <header className="bg-black text-white">
       <div className="flex items-center md:h-10 md:mx-16 lg:h-15 lg:mx-20 lg:justify-start lg:gap-10">
         <Logo />
         <HeaderNav />
