@@ -6,7 +6,7 @@ class ListNode {
     this.next = next;
   }
 }
-const body = new ListNode(1, new ListNode(2, new ListNode(3)));
+// const body = new ListNode(1, new ListNode(2, new ListNode(3)));
 
 export function reverseList(head: ListNode | null): ListNode | null {
   let prev: ListNode | null = null;
@@ -21,4 +21,4 @@ export function reverseList(head: ListNode | null): ListNode | null {
   return prev;
 }
 
-console.log(reverseList(body));
+// console.log(reverseList(body));
