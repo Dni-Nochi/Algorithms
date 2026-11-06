@@ -3,12 +3,15 @@ import { HomePage } from '@/pages/home';
 import { Algorithms } from '@/pages/algorithms';
 import { SolvedTasks } from '@/pages/solved_tasks';
 import { ReactMechanics } from '@/pages/react_mechanics';
+import { UsersPage, usersLoader } from '@/pages/users';
+
 import App from '../App';
 
 export const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
+    HydrateFallback: () => <div>Загрузка приложения...</div>,
     children: [
       { index: true, element: <HomePage /> },
       {
@@ -22,6 +25,11 @@ export const router = createBrowserRouter([
       {
         path: 'react_mechanics',
         element: <ReactMechanics />,
+      },
+      {
+        path: 'users',
+        element: <UsersPage />,
+        loader: usersLoader,
       },
     ],
   },
