@@ -11,4 +11,6 @@
 // export { reverseList } from './206_reverse_linked_list';
 // export { palindromeNumber } from './9_palindrome_number';
 // export { middleNode } from './876_middle_of_the_linked_list';
-// export {} from './237_Delete_Node_in_a_Linked_List';
+// export {deleteNode} from './237_Delete_Node_in_a_Linked_List';
+// export { twoSum } from './167_Two_Sum_2_Input_Array_Is_Sorted';
+// export { sortedSquares } from './977_Squares_of_a_Sorted_Array';
