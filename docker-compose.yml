@@ -2,8 +2,21 @@ services:
   database:
     image: mongo:latest
     container_name: algo_mongo
-    ports: -"27017:27017"
+    ports:
+      - '27017:27017'
     volumes:
       - mongo_data:/data/db
 
-volumes: mongo_data
+  backend:
+    build: ./back-end
+    container_name: algo_backend
+    ports:
+      - '3000:3000'
+    depends_on:
+      - database
+    volumes:
+      - ./back-end:/app
+      - /app/node_modules
+
+volumes:
+  mongo_data:
