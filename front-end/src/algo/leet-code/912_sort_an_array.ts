@@ -1,4 +1,4 @@
-const numsArray = [5, 2, 3, 1, 4];
+// const numsArray = [5, 2, 3, 1, 4];
 
 function merge(left: number[], right: number[]) {
   const result: number[] = [];
@@ -51,4 +51,4 @@ export function sortArray(nums: number[]): number[] {
   return merge(sortArray(left), sortArray(right));
 }
 
-console.log(sortArray(numsArray));
+// console.log(sortArray(numsArray));
