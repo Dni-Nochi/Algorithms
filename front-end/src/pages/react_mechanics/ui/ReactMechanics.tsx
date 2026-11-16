@@ -1,7 +1,8 @@
 export function ReactMechanics() {
   return (
-    <div className="flex flex-col mx-20">
-      <p>Test</p>
+    <div className="mx-10 text-white">
+      React Mechanics
+      <div>Dev Product</div>
     </div>
   );
 }

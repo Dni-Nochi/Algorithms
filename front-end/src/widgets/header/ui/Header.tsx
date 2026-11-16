@@ -1,20 +1,12 @@
-import { useState } from 'react';
 import { Logo } from '@/shared/ui/logo';
 import { HeaderNav } from '@/widgets/header/ui/HeaderNav';
-import { BurgerButton } from '@/shared/ui/burger';
 
 export function Header() {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
-
-  function toggleBurgerButton(): void {
-    setIsOpen((prev) => !prev);
-  }
   return (
-    <header className="bg-black text-white">
-      <div className="flex items-center md:h-10 md:mx-16 lg:h-15 lg:mx-20 lg:justify-start lg:gap-10">
+    <header className="h-16 bg-[#0B0F17] text-[#f8f8f9]">
+      <div className="flex items-center gap-10 h-full mx-10">
         <Logo />
         <HeaderNav />
-        <BurgerButton isOpen={isOpen} onClick={toggleBurgerButton} />
       </div>
     </header>
   );

@@ -1,9 +1,22 @@
-version: '3.8'
-
 services:
-  frontend:
-    build: ./front-end
+  database:
+    image: mongo:latest
+    container_name: algo_mongo
     ports:
-      - '5173:5173'
+      - '27017:27017'
+    volumes:
+      - mongo_data:/data/db
+
+  backend:
+    build: ./back-end
+    container_name: algo_backend
+    ports:
+      - '3000:3000'
     depends_on:
-      - backend
+      - database
+    volumes:
+      - ./back-end:/app
+      - /app/node_modules
+
+volumes:
+  mongo_data:

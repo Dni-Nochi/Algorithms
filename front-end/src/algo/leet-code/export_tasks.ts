@@ -7,3 +7,11 @@
 // export { search } from './704_binary_search';
 // export { searchInsert } from './35_search_insert_position';
 // export { firstBadVersion } from './278_first_bad_version';
+// export { longestCommonPrefix } from './14_longest_common_prefix';
+// export { reverseList } from './206_reverse_linked_list';
+// export { palindromeNumber } from './9_palindrome_number';
+// export { middleNode } from './876_middle_of_the_linked_list';
+// export {deleteNode} from './237_Delete_Node_in_a_Linked_List';
+// export { twoSum } from './167_Two_Sum_2_Input_Array_Is_Sorted';
+// export { sortedSquares } from './977_Squares_of_a_Sorted_Array';
+// export { sortArray } from './912_sort_an_array';

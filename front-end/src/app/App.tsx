@@ -1,15 +1,14 @@
 import { Outlet } from 'react-router-dom';
 import { Header } from '@/widgets/header';
-import '@/algo/search-algorithms/algo';
-import '@/algo/sorting-algorithms/bubble-sort';
-import '@/algo/recursion/recursion';
+import '@/algo/learn-algorithms/index';
 import '@/algo/leet-code/export_tasks';
+import '@/algo/data-structures/export_data_structures';
 
 function App() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen font-[sans-serif]">
       <Header />
-      <main className="grow bg-[#0a0a0a] text-white">
+      <main className="bg-[#0F131C] min-h-screen">
         <Outlet />
       </main>
     </div>
