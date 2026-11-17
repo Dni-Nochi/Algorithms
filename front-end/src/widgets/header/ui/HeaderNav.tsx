@@ -4,7 +4,7 @@ import { NAV_LINKS } from '@/shared/config/navConfig';
 export function HeaderNav() {
   return (
     <nav>
-      <ul className="flex gap-8">
+      <ul className="flex gap-3">
         {NAV_LINKS.map((item) => (
           <li key={item.id}>
             <Link to={item.path}>{item.label}</Link>
